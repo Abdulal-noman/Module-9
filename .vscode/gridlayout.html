@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout practice</title>
+    <style>
+        .header, .nav, .main, .sideber, .ad, .footer {
+            background-color: rgb(223, 133, 16);
+            border: 2px solid white;
+            padding: 5px;
+            border-radius: 25px;
+        }
+        .header{
+            grid-area: header;
+        }
+        .nav{
+            grid-area: nav;
+        }
+        .main{
+            grid-area: main;
+        }
+        .sideber{
+            grid-area: sideber;
+        }
+        .ad{
+            grid-area: ad;
+        }
+        .footer{
+            grid-area: footer;
+        }
+        .container{
+            display: grid;
+            gap: 20px;
+            grid-template-areas: 
+            "header header header header"
+            "nav    main    main    sidebar"
+            "nav    main    main     ad"
+            "footer  footer  footer footer"
+
+        }
+@media screen and (max-width:576px) {
+    .container{
+      grid-template-areas: 
+      "header"
+      "nav"
+      "main"
+      "sideber"
+      "ad"
+      "footer"
+    }
+}
+    </style>
+</head>
+<body class="container">
+   <header class="header">
+    <h3>The Header</h3>
+   </header> 
+   <nav class="nav">
+    <ul>
+        <li><a href="">NAV - 1</a></li>
+        <li><a href="">NAV - 2</a></li>
+        <li><a href="">NAV - 3</a></li>
+    </ul>
+   </nav>
+        
+        <main class="main">
+          <article>
+            <h3>Main Article 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nesciunt, molestias incidunt ex nihil a sequi consequatur est ea praesentium. Aliquam expedita maxime dolorum fugit eius. Sequi tenetur optio obcaecati! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque nisi adipisci totam harum voluptates debitis aut ducimus consectetur, aliquid, at similique necessitatibus ut provident vero! Ipsum distinctio reprehenderit odit iste!</p>
+          </article>
+          <article>
+            <h3>Main Article 2</h3>
+            <p>Illo modi hic ab architecto odit! Asperiores facilis, impedit, est veritatis laudantium architecto quisquam placeat explicabo rem ab dolore hic, fugit officia error esse nobis reprehenderit. Id harum vitae nulla! Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum non voluptas sequi sunt consequuntur repellendus voluptates, magni quidem consequatur! Excepturi, consectetur? Dolorem esse sit possimus temporibus tenetur, fugiat exercitationem illo!</p>
+          </article>
+        </main>
+        <aside>
+            <div class="sideber">
+                <h4>sideber</h4>
+            </div>
+            <div class="ad">
+                <h4>Advertise</h4>
+            </div>
+
+        </aside>
+        <footer class="footer">
+            <h3>The Footer</h3>
+        </footer>
+</body>
+</html>
