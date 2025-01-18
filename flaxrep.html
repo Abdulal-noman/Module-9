@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox</title>
+    <style>
+        .container{
+            display: flex;
+            gap: 10px;
+        }
+        .box1{
+            background-color: aqua;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .container2{
+            height: 100px;
+            width: 100px;
+            display: grid;
+            font-size: 3em;
+            grid-template-columns: repeat(4,1fr);
+            gap: 100px;
+        }
+        .box{
+            background-color: azure;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media screen and (max-width:576px) {
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+   <section>
+     <h2>Flexible box</h2>
+    <div class="container">
+        <div class="box1">
+            <h2>first box</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, placeat quam! Nobis a expedita repudiandae exercitationem odio omnis sit. Quidem laudantium rem itaque explicabo velit autem at eos voluptas mollitia?</p>
+            
+        </div>
+        <div class="container">
+            <div class="box1">
+                <h2>second box</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, placeat quam! Nobis a expedita repudiandae exercitationem odio omnis sit. Quidem laudantium rem itaque explicabo velit autem at eos voluptas mollitia?</p>
+    </div>
+</section>
+<section>
+    <div class="container2">
+        <div class="box"> 01 </div>
+        <div class="box"> 02 </div>
+        <div class="box"> 03 </div>
+        <div class="box"> 04 </div>
+        <div class="box"> 05 </div>
+        <div class="box"> 06 </div>
+        <div class="box"> 07 </div>
+        <div class="box"> 08 </div>
+        <div class="box"> 09 </div>
+        <div class="box"> 10 </div>
+        <div class="box"> 11 </div>
+        <div class="box"> 12 </div>
+        <div class="box"> 13 </div>
+        <div class="box"> 14 </div>
+        <div class="box"> 15 </div>
+    </div>
+</section>
+</body>
+</html>
